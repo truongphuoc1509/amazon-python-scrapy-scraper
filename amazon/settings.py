@@ -4,10 +4,10 @@ BOT_NAME = 'amazon'
 SPIDER_MODULES = ['amazon.spiders']
 NEWSPIDER_MODULE = 'amazon.spiders'
 
-# Obey robots.txt rules
+# Obey robots.txt rules(*)
 ROBOTSTXT_OBEY = False
 
-SCRAPEOPS_API_KEY = 'YOUR_API_KEY'
+SCRAPEOPS_API_KEY = '5fd04a51-2651-47bb-9753-0e8f21ec34b8'
 
 SCRAPEOPS_PROXY_ENABLED = True
 # SCRAPEOPS_PROXY_SETTINGS = {'country': 'us'}
@@ -16,12 +16,12 @@ SCRAPEOPS_PROXY_ENABLED = True
 EXTENSIONS = {
 'scrapeops_scrapy.extension.ScrapeOpsMonitor': 500, 
 }
-
+#(*)
 LOG_LEVEL = 'INFO'
 
 DOWNLOADER_MIDDLEWARES = {
 
-    ## ScrapeOps Monitor
+    ## ScrapeOps Monitor(*)
     'scrapeops_scrapy.middleware.retry.RetryMiddleware': 550,
     'scrapy.downloadermiddlewares.retry.RetryMiddleware': None,
     
